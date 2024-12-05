@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Red+Hat+Display:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--white);
+}
+
+p {
+    display: inline-block;
+}
+
+strong {
+    font-weight: 800;
+}
+
+:root {
+    --black: #101010;
+    --white: #d9d9d9;
+    --blurple: #584cda;
+    --orange: #feb029;
+    --lightgrey: #8f8f8f;
+    --grey: #606060;
+    --semidarkgrey: #282828;
+    --darkgrey: #181818;
+
+    --btn-blurple: #7168d6;
+    --btn-orange: #daa240;
+    --btn-green: #3c5d46;
+
+    --tag: #203143;
+    --selection: #daa24045;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+::selection {
+    background: var(--selection);
+    color: var(--white);
+}
+
+/* FUNCTIONS */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.emphasize {
+    font-weight: 800;
+}
+
+.orange {
+    color: var(--orange) !important;
+}
+
+.btn-orange {
+    color: var(--btn-orange) !important;
+}
+
+.blurple {
+    color: var(--blurple) !important;
+}
+
+.btn-blurple {
+    color: var(--btn-blurple) !important;
+}
+
+.grey {
+    color: var(--lightgrey) !important;
+}
+
+.icon-bottom {
+    margin-bottom: 0.4rem;
+}
+
+.main-text {
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 700 !important;
+}
+
+.main-text-fill {
+    font-weight: 700 !important;
+    background-image: linear-gradient(
+        to right,
+        var(--white) 0%,
+        var(--grey) 60%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-text-min {
+    font-size: 1.6rem !important;
+}
+
+input {
+    width: 100%;
+    border: 1px solid var(--darkgrey);
+    padding: 0.5rem;
+    border-radius: 4px;
+    outline: none;
+    background-color: var(--semidarkgrey);
+    color: var(--lightgrey);
+}
+
+.styled-button {
+    background-color: transparent;
+    color: var(--lightgrey);
+    padding: 0.75rem 2.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: solid 2px var(--blurple);
+    font-weight: 800;
+    gap: 0.5rem;
+    outline: none;
+}
+
+.styled-button > * {
+    font-weight: 800;
+}
+
+button.styled-button:disabled:hover {
+    background-color: var(--darkgrey);
+    cursor: default;
+    color: var(--lightgrey);
+}
+
+button.styled-button:hover, button:hover {
+    background-color: var(--semidarkgrey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.hidden-element {
+    display: none;
+}
+
+.click:hover {
+    cursor: pointer;
+}
+
+.sup {
+    font-size: 0.8rem;
+    color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+    .hidden {
+        display: none;
+    }
+
+    p.main-text {
+        font-size: 2rem;
+    }
+
+    button.styled-button {
+        padding: 0.6rem 2rem;
+    }
+
+    p.main-text-min {
+        font-size: 1.4rem;
+    }
+}
+
+/* Aplica a personalização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darkgrey);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--btn-blurple);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blurple);
+}
+
+/* TOASTR */
+#toast-container > .toast {
+    background-color: var(--semidarkgrey) !important;
+    color: var(--white) !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#toast-container > .toast > .toast-progress {
+    opacity: 0.8;
+}
+
+#toast-container > .toast.toast-success > .toast-progress {
+    background-color: #28a745 !important;
+}
+
+#toast-container > .toast.toast-error > .toast-progress {
+    background-color: #dc3545 !important;
+}
+
+#toast-container > .toast.toast-info > .toast-progress {
+    background-color: #007bff !important;
+}
+
+#toast-container > .toast.toast-warning > .toast-progress {
+    background-color: #ffc107 !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
