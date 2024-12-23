@@ -180,7 +180,9 @@ export default {
         }
     },
     mounted() {
-        this.socket = io(this.$baseUrl);
+        this.socket = io(this.$baseUrl, {
+            withCredentials: true,
+        });
         this.fetchContacts();
 
         this.socket.on("receiveMessage", () => {
