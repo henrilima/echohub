@@ -21,7 +21,7 @@ app.use(router);
 app.use(store);
 app.component("v-icon", OhVueIcon);
 
-app.config.globalProperties.$baseUrl = "https://echohub-api.vercel.app";
+app.config.globalProperties.$baseUrl = "https://echocybersho.discloud.app";
 app.config.globalProperties.$isStrongPassword = function isStrongPassword(
     password,
     config = {}

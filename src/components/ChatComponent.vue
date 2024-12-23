@@ -77,7 +77,10 @@ export default {
     },
     mounted() {
         this.socket = io(this.$baseUrl, {
-            transports: ["websocket", "polling"],
+            path: "/socket.io",
+            transports: ['websocket',  'polling'],
+            withCredentials: true,
+            secure: true,
         });
         this.fetchMessages();
 
