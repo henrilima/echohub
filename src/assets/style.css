@@ -143,8 +143,16 @@ button.styled-button:disabled:hover {
     color: var(--lightgrey);
 }
 
-button.styled-button:hover, button:hover {
-    background-color: var(--semidarkgrey);
+button.styled-button:hover:not(:disabled),
+button:hover:not(:disabled) {
+    background-color: var(--semidarkgrey) !important;
+    color: var(--white);
+    cursor: pointer;
+}
+
+button.styled-button:hover:not(:disabled):is(.btn-active),
+button:hover:not(:disabled):is(.btn-active) {
+    border: solid 2px var(--blurple);
     color: var(--white);
     cursor: pointer;
 }
@@ -162,7 +170,7 @@ button.styled-button:hover, button:hover {
     color: var(--white);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
     .hidden {
         display: none;
     }
@@ -227,10 +235,10 @@ button.styled-button:hover, button:hover {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 0;
+    opacity: 0;
 }

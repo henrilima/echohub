@@ -175,7 +175,7 @@ aside {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     /* Display the hamburger button in mobile view */
     .hamburger {
         display: flex;

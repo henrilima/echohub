@@ -58,13 +58,13 @@
                         ><v-icon name="fa-link" scale="1.2" /> Site Pessoal</a
                     >
                 </div>
+                <div class="profile-actions">
+                    <button @click="editProfile" class="edit-button">
+                        Editar Perfil
+                    </button>
+                    <button @click="logout" class="logout-button">Sair</button>
+                </div>
             </div>
-        </div>
-        <div class="profile-actions">
-            <button @click="editProfile" class="edit-button">
-                Editar Perfil
-            </button>
-            <button @click="logout" class="logout-button">Sair</button>
         </div>
     </div>
 </template>
@@ -103,8 +103,9 @@ export default {
 <style scoped>
 .profile-current {
     width: 100%;
+    height: auto;
     background: var(--darkgrey);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
     color: var(--white);
 
@@ -170,13 +171,13 @@ p {
 }
 
 .profile-page {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
     background: var(--darkgrey);
     color: var(--white);
-    height: 100vh;
+    height: auto;
 }
 
 .profile-header {
@@ -193,7 +194,11 @@ p {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
+.profile-actions {
+    margin: 3rem 0;
 }
 
 .profile-actions button {
@@ -227,9 +232,10 @@ button:hover {
 /* Responsividade */
 @media (max-width: 600px) {
     .profile-avatar {
-        width: 80px;
-        height: 80px;
+        width: 180px;
+        height: 180px;
     }
+
     .profile-actions button {
         font-size: 14px;
     }

@@ -203,7 +203,6 @@ export default {
     methods: {
         showModal(user) {
             this.selectedUser = user;
-            console.log(user);
             this.isModalVisible = true;
         },
         closeModal() {

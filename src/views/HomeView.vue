@@ -138,13 +138,13 @@ button.styled-button:hover, button:hover {
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     .stroke-text {
         display: none;
     }
 
     .content .main-image {
-        width: 100%;
+        display: none;
     }
 
     .content {

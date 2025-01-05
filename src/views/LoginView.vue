@@ -47,7 +47,7 @@
                     </button>
                     <button
                         type="submit"
-                        class="styled-button"
+                        class="styled-button btn-active"
                         :disabled="!isFormValid"
                         @click="submitLogin()"
                     >
@@ -275,7 +275,7 @@ button.styled-button:hover, button:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     .login-container {
         max-width: 90%;
     }

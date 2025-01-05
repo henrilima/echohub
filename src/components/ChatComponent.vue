@@ -2,7 +2,7 @@
     <div class="chat-area">
         <div class="chat-header">
             <button class="back-button" @click="$emit('close-chat')">
-                <v-icon name="md-arrowcircleleft-outlined" />Voltar
+                <v-icon name="md-arrowcircleleft-outlined" /><span>Voltar</span>
             </button>
             <div>
                 <h2>{{ contact.username }}</h2>
@@ -36,7 +36,7 @@
                 @keyup.enter="handleKeyupEnter"
             />
             <button @click="sendMessage()" :disabled="!newMessage.trim()">
-                Enviar<v-icon name="md-send-round" />
+                <span>Enviar</span><v-icon name="md-send-round" />
             </button>
         </div>
     </div>
@@ -80,8 +80,8 @@ export default {
             withCredentials: true,
             extraHeaders: {
                 "Access-Control-Allow-Credentials": true,
-                "my-custom-header": true
-            }
+                "my-custom-header": true,
+            },
         });
         this.fetchMessages();
 
@@ -206,11 +206,15 @@ button {
     gap: 0.5rem;
 }
 
-button:hover {
+button:hover:not(.back-button) {
     background-color: var(--semidarkgrey);
     color: var(--white);
     border-color: var(--blurple);
     transition: all 0.4s ease;
+}
+
+button:hover:is(.back-button) {
+    background-color: var(--black) !important;
 }
 
 button:disabled {
@@ -299,12 +303,32 @@ input {
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 920px) {
     .chat-header h2 {
         font-size: 16px;
     }
     input {
         font-size: 14px;
+    }
+
+    .messages {
+        padding: 1rem;
+    }
+
+    .sent,
+    .received {
+        max-width: 75%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    button span {
+        display: none;
+    }
+
+    button {
+        padding: 0.75rem 1rem !important;
     }
 }
 </style>

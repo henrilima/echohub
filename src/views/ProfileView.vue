@@ -253,8 +253,6 @@ export default {
                         this.user.avatar = response.data.data.avatar;
                     }
 
-                    console.log(this.user);
-
                     this.$store.dispatch("loginUser", this.user);
                     toastr.success(response.data.message);
                 } else {
@@ -436,10 +434,11 @@ p {
 
     .profile-current {
         margin-bottom: 2rem;
+        position: static;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     .profile-view {
         padding: 1rem;
     }

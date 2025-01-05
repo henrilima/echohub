@@ -19,7 +19,6 @@ export default {
             settingsOptions: [
                 { label: "Alterar Senha", action: "changePassword" },
                 { label: "Notificações", action: "notifications" },
-                { label: "Privacidade", action: "privacy" },
             ],
         };
     },
@@ -27,13 +26,10 @@ export default {
         selectOption(action) {
             switch (action) {
                 case "changePassword":
-                    alert("Função de alterar senha em desenvolvimento!");
+                    this.$router.push('/forgot');
                     break;
                 case "notifications":
                     alert("Função de notificações em desenvolvimento!");
-                    break;
-                case "privacy":
-                    alert("Função de privacidade em desenvolvimento!");
                     break;
                 default:
                     alert("Ação desconhecida!");

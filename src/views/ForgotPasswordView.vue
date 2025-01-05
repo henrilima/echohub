@@ -5,7 +5,7 @@
                 Qual o seu <span class="emphasize orange">email</span>?
             </h3>
             <p>
-                Nós iremos te enviar um email com um link para recuperação de
+                Nós iremos te enviar um email com um link para recuperação/troca de
                 senha. Para sua segurança,
                 <span class="emphasize orange">NÃO COMPARTILHE</span> esse link
                 com ninguém, caso contrário, outras pessoas poderão acessar sua

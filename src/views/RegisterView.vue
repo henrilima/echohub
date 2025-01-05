@@ -67,7 +67,7 @@
                     </button>
                     <button
                         type="submit"
-                        class="styled-button"
+                        class="styled-button btn-active"
                         :disabled="!isFormValid"
                         @click="submitRegister()"
                     >
@@ -127,13 +127,14 @@ export default {
         },
         validateUsername() {
             const usernameIsLong = this.username.length >= 3;
+            const usernameIsTooLong = this.username.length <= 16;
             const usernameRegex = /^[a-z0-9._]+$/;
 
-            const test = usernameIsLong && usernameRegex.test(this.username);
+            const test = usernameIsLong && usernameIsTooLong && usernameRegex.test(this.username);
 
             if (test === false) {
                 toastr.info(
-                    "Seu nome de usuário só pode conter letras minúsculas, números, underlines e pontos finais.",
+                    "Seu nome de usuário só pode conter letras minúsculas, números, underlines e pontos finais. Não pode ser menor que 3 ou maior que 16 caracteres.",
                     "Informações sobre o nome de usuário",
                     {
                         timeOut: 10000,
@@ -316,7 +317,7 @@ button.styled-button:hover, button:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     .register-container {
         max-width: 90%;
     }
