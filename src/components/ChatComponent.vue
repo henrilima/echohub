@@ -78,6 +78,10 @@ export default {
     mounted() {
         this.socket = io(this.$baseUrl, {
             withCredentials: true,
+            extraHeaders: {
+                "Access-Control-Allow-Credentials": true,
+                "my-custom-header": true
+            }
         });
         this.fetchMessages();
 

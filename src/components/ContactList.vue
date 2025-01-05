@@ -51,7 +51,14 @@
                 <div>
                     <h3 class="emphasize">@{{ contact.username }}</h3>
                     <p>
-                        <span :class="{ emphasize: true, 'btn-blurple': contact.lastMessage.sender === this.user.id, 'btn-orange': contact.lastMessage.sender !== this.user.id }"
+                        <span
+                            :class="{
+                                emphasize: true,
+                                'btn-blurple':
+                                    contact.lastMessage.sender === this.user.id,
+                                'btn-orange':
+                                    contact.lastMessage.sender !== this.user.id,
+                            }"
                             >{{
                                 contact.lastMessage.sender === this.user.id
                                     ? "Você"
@@ -182,6 +189,10 @@ export default {
     mounted() {
         this.socket = io(this.$baseUrl, {
             withCredentials: true,
+            extraHeaders: {
+                "Access-Control-Allow-Credentials": true,
+                "my-custom-header": true,
+            },
         });
         this.fetchContacts();
 
