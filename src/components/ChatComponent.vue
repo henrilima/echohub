@@ -286,6 +286,13 @@ button:hover:disabled svg {
     background-color: var(--grey);
 }
 
+.sent,
+.received {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
 .message-input {
     display: flex;
     padding: 1rem 2rem;
@@ -318,9 +325,6 @@ input {
     .sent,
     .received {
         max-width: 75%;
-        overflow-wrap: break-word;
-        word-break: break-word;
-        white-space: normal;
     }
 
     button span {

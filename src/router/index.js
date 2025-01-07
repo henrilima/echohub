@@ -20,6 +20,11 @@ const routes = [
         component: () => import("../views/RegisterView.vue"),
     },
     {
+        path: "/privacity",
+        name: "privacity",
+        component: () => import("../views/PrivacityView.vue"),
+    },
+    {
         path: "/app",
         name: "app",
         component: () => import("../views/AppView.vue"),
@@ -68,11 +73,14 @@ const routes = [
             }
         },
     },
-    
     {
         path: "/forgot",
         name: "forgot",
         component: () => import("../views/ForgotPasswordView.vue"),
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        redirect: '/',
     },
 ];
 

@@ -341,9 +341,10 @@ label {
 }
 
 p {
-    word-wrap: break-word;
-    word-break: break-all;
     overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
 }
 
 .profile-picture {

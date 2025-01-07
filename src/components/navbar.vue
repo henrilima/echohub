@@ -7,8 +7,8 @@
             <nav class="hidden">
                 <ul>
                     <li><a href="/">Início</a></li>
-                    <li><a href="/aboutus">Sobre nós</a></li>
-                    <li><a href="/support">Suporte</a></li>
+                    <li><a href="/privacity">Privacidade</a></li>
+                    <li><a href="/#support">Suporte</a></li>
                 </ul>
             </nav>
             <button
@@ -32,8 +32,8 @@
                 <h2>Echo<span class="emphasize blurple">Hub</span></h2>
                 <ul>
                     <li><a href="/">Início</a></li>
-                    <li><a href="/aboutus">Sobre nós</a></li>
-                    <li><a href="/support">Suporte</a></li>
+                    <li><a href="/privacity">Privacidade</a></li>
+                    <li><a href="/#support">Suporte</a></li>
                 </ul>
                 <button
                     class="styled-button"

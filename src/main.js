@@ -9,7 +9,9 @@ import { OhVueIcon, addIcons } from "oh-vue-icons";
 import * as IconsFa from "oh-vue-icons/icons/fa";
 import * as IconsHi from "oh-vue-icons/icons/hi";
 import * as IconsMd from "oh-vue-icons/icons/md";
-const iconSets = [IconsFa, IconsHi, IconsMd];
+import * as IconsLa from "oh-vue-icons/icons/la";
+import * as IconsGi from "oh-vue-icons/icons/gi";
+const iconSets = [IconsFa, IconsHi, IconsMd, IconsLa, IconsGi];
 const Icons = iconSets.flatMap(Object.values);
 
 const Icon = Object.values({ ...Icons });
@@ -22,6 +24,7 @@ app.use(store);
 app.component("v-icon", OhVueIcon);
 
 app.config.globalProperties.$baseUrl = "https://echocybersho.discloud.app";
+
 app.config.globalProperties.$isStrongPassword = function isStrongPassword(
     password,
     config = {}
